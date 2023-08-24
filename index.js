@@ -110,7 +110,7 @@ async function run() {
                   const result = {admin: user?.role == "admin"}
                   res.send(result)
        } )
-       app.get("/users/adminpro/:email",varifyJWT, verifyAdmin, async(req, res)=>{
+       app.get("/users/adminpro/:email",varifyJWT , async(req, res)=>{
          
                   const email = req.decoded.email;
 
